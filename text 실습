@@ -1,0 +1,13 @@
+file= open("score.txt" ,"r", encoding = "UTF-8")
+result= 0
+
+for line in file:
+    line = line.rstrip()
+    print(line)
+    line= line.split()
+    result += eval(line[1])
+
+
+
+print(f"합산결과 : {result}")
+
