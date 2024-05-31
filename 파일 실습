@@ -1,0 +1,16 @@
+import pickle
+
+n = int(input("몇 개의 int를 저장할까요? "))
+file = open("test.dat", "wb")
+
+
+try:
+    while True:
+        a=pickle.load()
+        print(a)
+except EOFError as e:
+    print("예외가 발생했습니다.")
+    print(e)
+finally:
+    print("파일을 닫겠습니다.")
+    file.close()
