@@ -1,0 +1,14 @@
+import random
+# GetANumber 함수를 작성하라.
+def GetANumber():
+    count= 0
+    while True:
+        count +=1
+        yield count, random.randint(1,10)
+var = GetANumber()
+count, value = next(var)
+print(f"{count} : {value}")
+for count, value in var:
+    print(f"{count} : {value}")
+    if count == 5:
+        break
