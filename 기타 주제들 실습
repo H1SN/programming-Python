@@ -12,3 +12,17 @@ for count, value in var:
     print(f"{count} : {value}")
     if count == 5:
         break
+
+
+
+
+import itertools
+
+def Func(data):
+    myiter = itertools.combinations(data, 3)
+    for z,y,x in myiter:
+            if z + y+ x ==10:
+                print(f"{x} * {y} * {z} = {x * y * z}")
+
+data = [5, 2, 3, 7, 1, 7, 8, 5, 9, 4, 6]
+Func(data)
